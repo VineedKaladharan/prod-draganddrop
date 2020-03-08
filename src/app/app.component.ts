@@ -13,16 +13,10 @@ export class AppComponent {
 
   ngOnInit(): void {}
 
-  /**
-   * on file drop handler
-   */
   onFileDropped($event) {
     this.prepareFilesList($event);
   }
 
-  /**
-   * handle file from browsing
-   */
   fileBrowseHandler(files) {
     this.prepareFilesList(files);
   }
@@ -36,9 +30,6 @@ export class AppComponent {
     this.files.splice(index, 1);
   }
 
-  /**
-   * Simulate the upload process
-   */
   uploadFilesSimulator(index: number) {
     setTimeout(() => {
       if (index === this.files.length) {
